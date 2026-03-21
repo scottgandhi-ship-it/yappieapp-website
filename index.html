@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yappie -- Communication &amp; Routine Apps for Kids</title>
+<meta name="description" content="Two apps built by a parent, for parents. Helping your child communicate, build routines, and feel prepared -- one tap at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #7C74FF;
+  --primary-dark: #5A52D5;
+  --secondary: #66BB6A;
+  --secondary-dark: #43A047;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --warm: #FFF8F0;
+  --text: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --radius: 16px;
+  --radius-sm: 12px;
+  --max-width: 960px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Nav ── */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+/* ── Sections ── */
+section {
+  padding: 80px 24px;
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(180deg, var(--warm) 0%, var(--bg) 100%);
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 100px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.hero .subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0 auto 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(124,116,255,0.3);
+}
+
+.btn-primary:hover { box-shadow: 0 6px 24px rgba(124,116,255,0.4); }
+
+.btn-secondary {
+  background: var(--secondary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(102,187,106,0.3);
+}
+
+.btn-secondary:hover { box-shadow: 0 6px 24px rgba(102,187,106,0.4); }
+
+/* ── App Sections ── */
+.app-section {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 48px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.app-section.reversed { direction: rtl; }
+.app-section.reversed > * { direction: ltr; }
+
+.app-section-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.tag-yappie { background: rgba(124,116,255,0.1); color: var(--primary); }
+.tag-gs { background: rgba(102,187,106,0.1); color: var(--secondary-dark); }
+
+.app-section h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.app-section .app-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-list li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  padding-left: 28px;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.feature-list.purple li::before { background: var(--primary); }
+.feature-list.green li::before { background: var(--secondary); }
+
+.app-price {
+  margin-top: 24px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+}
+
+.app-price span {
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.app-mockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--warm);
+  border-radius: var(--radius);
+  min-height: 360px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* ── Feature Highlight ── */
+.feature-highlight {
+  text-align: center;
+}
+
+.feature-highlight h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.feature-highlight .highlight-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.highlight-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.highlight-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  text-align: left;
+}
+
+.highlight-card-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.highlight-card h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .highlight-cards { grid-template-columns: 1fr; }
+}
+
+/* ── Trust ── */
+.trust-section {
+  text-align: center;
+}
+
+.trust-section h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.trust-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.trust-pillar {
+  padding: 24px;
+}
+
+.trust-pillar-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.trust-pillar h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.trust-pillar p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* ── About ── */
+.about-section {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 48px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.about-content {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: var(--text);
+  color: rgba(255,255,255,0.7);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: #fff; }
+
+.footer-social {
+  margin-bottom: 24px;
+}
+
+.footer-social a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover { color: #fff; }
+
+.footer-donate {
+  margin-bottom: 24px;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero .subtitle { font-size: 1rem; }
+
+  .app-section {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+
+  .app-section.reversed { direction: ltr; }
+
+  .app-mockup { min-height: 240px; }
+
+  .trust-pillars {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-section { padding: 32px 24px; }
+
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .btn { width: 100%; max-width: 280px; justify-content: center; }
+  section { padding: 60px 16px; }
+  .app-section { padding: 24px 16px; }
+}
+
+/* ── Smooth scroll ── */
+html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="site-nav">
+  <a href="#" class="nav-brand">Yappie</a>
+  <ul class="nav-links">
+    <li><a href="#yappie">Yappie</a></li>
+    <li><a href="#guiding-steps">Guiding Steps</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#support">Support</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="section-inner">
+    <h1>Every child has something to say.</h1>
+    <p class="subtitle">Two apps built by a parent, for parents. Helping your child communicate, build routines, and feel prepared -- one tap at a time.</p>
+    <div class="hero-buttons">
+      <a href="#yappie" class="btn btn-primary">Get Yappie</a>
+      <a href="#guiding-steps" class="btn btn-secondary">Get Guiding Steps</a>
+    </div>
+  </div>
+</section>
+
+<!-- Yappie -->
+<section id="yappie">
+  <div class="section-inner">
+    <div class="app-section">
+      <div>
+        <span class="app-section-tag tag-yappie">Communication</span>
+        <h2>Yappie</h2>
+        <p class="app-tagline">Your child's voice, in their hands.</p>
+        <p style="color:var(--text-secondary);font-weight:600;margin-bottom:20px;">A communication board designed for children ages 2-6. Tap words, build sentences, hear them spoken out loud. Customizable, colorful, and clinically informed.</p>
+        <ul class="feature-list purple">
+          <li>600+ words organized by activity, not taxonomy</li>
+          <li>Custom photos -- use images your child actually recognizes</li>
+          <li>Works offline -- no internet needed after setup</li>
+          <li>Built on AAC best practices (motor planning, core vocabulary)</li>
+        </ul>
+        <p class="app-price"><span>$9.99</span> -- one time, no subscription.</p>
+      </div>
+      <div class="app-mockup">Screenshot placeholder</div>
+    </div>
+  </div>
+</section>
+
+<!-- Yappie Activities Highlight -->
+<section class="feature-highlight" style="background:var(--warm);">
+  <div class="section-inner">
+    <span class="app-section-tag tag-yappie">Only in Yappie</span>
+    <h2>Activity-Based Communication</h2>
+    <p class="highlight-tagline">Most AAC apps organize words by category. Yappie organizes them by what your child is actually doing -- so the right words are always right there.</p>
+    <div class="highlight-cards">
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1F37D;</div>
+        <h3>Mealtime</h3>
+        <p>Words like "more", "all done", "water", and "yummy" -- surfaced together when it's time to eat.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1F3DD;</div>
+        <h3>Playground</h3>
+        <p>"Push", "swing", "slide", "my turn" -- the words your child needs when they're playing, not buried in a folder.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1F6C1;</div>
+        <h3>Bath Time</h3>
+        <p>"Warm", "cold", "splash", "all done" -- context-specific vocabulary that makes communication natural.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guiding Steps -->
+<section id="guiding-steps">
+  <div class="section-inner">
+    <div class="app-section reversed">
+      <div>
+        <span class="app-section-tag tag-gs">Routines &amp; Stories</span>
+        <h2>Guiding Steps</h2>
+        <p class="app-tagline">Structure that feels like support.</p>
+        <p style="color:var(--text-secondary);font-weight:600;margin-bottom:20px;">Visual schedules, reward charts, and social stories designed for children who thrive with routine and preparation.</p>
+        <ul class="feature-list green">
+          <li>Visual schedules with step-by-step progress</li>
+          <li>Reward charts that celebrate effort, not perfection</li>
+          <li>Social stories for doctor visits, haircuts, school, and more</li>
+          <li>Sensory-friendly design throughout</li>
+        </ul>
+        <p class="app-price"><span>$4.99</span> -- one time, no subscription.</p>
+      </div>
+      <div class="app-mockup">Screenshot placeholder</div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Stories Highlight -->
+<section class="feature-highlight">
+  <div class="section-inner">
+    <span class="app-section-tag tag-gs">Inside Guiding Steps</span>
+    <h2>Social Stories That Prepare, Not Just Describe</h2>
+    <p class="highlight-tagline">Help your child feel ready for new experiences with personalized, illustrated stories they can read together with you -- or on their own.</p>
+    <div class="highlight-cards">
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1FA7A;</div>
+        <h3>Doctor Visits</h3>
+        <p>"The doctor will look at your body to make sure you are healthy." Step-by-step preparation that reduces anxiety before it starts.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x2702;</div>
+        <h3>Haircuts</h3>
+        <p>"The clippers might buzz and feel tingly. That is just what they do." Sensory-aware language that validates your child's experience.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1F3EB;</div>
+        <h3>First Day of School</h3>
+        <p>"It is okay to feel nervous about something new." Stories that name the feeling and give your child a plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust -->
+<section class="trust-section">
+  <div class="section-inner">
+    <h2>Built different. On purpose.</h2>
+    <div class="trust-pillars">
+      <div class="trust-pillar">
+        <div class="trust-pillar-icon">&#x2764;</div>
+        <h3>Built by a parent</h3>
+        <p>These apps exist because our family needed them. Every feature solves a real problem.</p>
+      </div>
+      <div class="trust-pillar">
+        <div class="trust-pillar-icon">&#x1F512;</div>
+        <h3>Your data stays on device</h3>
+        <p>No accounts. No cloud. No tracking. Everything lives on your phone, nowhere else.</p>
+      </div>
+      <div class="trust-pillar">
+        <div class="trust-pillar-icon">&#x2728;</div>
+        <h3>Pay once, use forever</h3>
+        <p>No subscriptions. No in-app purchases. One fair price and it's yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" style="background:var(--warm);">
+  <div class="section-inner">
+    <div class="about-section">
+      <h2>About</h2>
+      <div class="about-content">
+        <p>My daughter is four years old and was diagnosed with autism in 2024. Getting her to communicate has been our family's single focus since she was two -- but progress was slow, and the tools that could help were out of reach.</p>
+        <p style="margin-top:16px;">Our developmental and speech therapists recommended an AAC device. Insurance wouldn't cover it. When I talked to other parents, the story was almost always the same: insurance won't cover it, or the price is too high. The families who need these tools the most are the ones who can't afford them.</p>
+        <p style="margin-top:16px;">I believe every child who needs a voice should have access to one. So I started building.</p>
+        <p style="margin-top:16px;">Yappie and Guiding Steps are built by one parent, one developer, during nights and weekends -- for families like mine. I'm still in it, just like you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Support -->
+<section id="support">
+  <div class="section-inner" style="text-align:center;">
+    <h2 style="font-size:1.8rem;font-weight:900;margin-bottom:16px;">Support</h2>
+    <p style="font-size:1.05rem;font-weight:600;color:var(--text-secondary);max-width:480px;margin:0 auto 24px;">Have a question, found a bug, or just want to say hi? We'd love to hear from you.</p>
+    <a href="mailto:support@yappieapp.com" class="btn btn-primary" style="display:inline-flex;">Email Support</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <ul class="footer-links">
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/terms">Terms of Service</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://instagram.com/yappieapp" target="_blank" rel="noopener">Instagram: @yappieapp</a>
+    </div>
+    <div class="footer-donate">
+      <!-- PayPal donate button goes here -->
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);">[PayPal Donate Button]</p>
+    </div>
+    <p class="footer-tagline">Made with love for families who need it most.</p>
+  </div>
+</footer>
+
+</body>
+</html>
