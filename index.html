@@ -235,10 +235,16 @@ section {
   justify-content: center;
   background: var(--warm);
   border-radius: var(--radius);
+  overflow: hidden;
   min-height: 360px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-muted);
+}
+
+.app-mockup img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
 /* ── Feature Highlight ── */
@@ -492,7 +498,7 @@ html { scroll-behavior: smooth; }
         </ul>
         <p class="app-price"><span>$9.99</span> -- one time, no subscription.</p>
       </div>
-      <div class="app-mockup">Screenshot placeholder</div>
+      <div class="app-mockup"><img src="images/yappie-home.jpg" alt="Yappie AAC board showing colorful word categories and sentence builder"></div>
     </div>
   </div>
 </section>
@@ -540,7 +546,7 @@ html { scroll-behavior: smooth; }
         </ul>
         <p class="app-price"><span>$4.99</span> -- one time, no subscription.</p>
       </div>
-      <div class="app-mockup">Screenshot placeholder</div>
+      <div class="app-mockup"><img src="images/gs-schedule.jpg" alt="Guiding Steps morning routine schedule with step-by-step progress"></div>
     </div>
   </div>
 </section>
