@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yappie -- Communication &amp; Routine Apps for Kids</title>
-<meta name="description" content="Two apps built by a parent, for parents. Helping your child communicate, build routines, and feel prepared -- one tap at a time.">
+<title>Yappie -- Routine &amp; Communication Apps for Kids with Autism</title>
+<meta name="description" content="Two apps built by a parent, for parents. Visual schedules, social stories, task strips, and AAC communication -- tools therapists are calling a game changer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --primary: #7C74FF;
-  --primary-dark: #5A52D5;
-  --secondary: #66BB6A;
-  --secondary-dark: #43A047;
+  --primary: #66BB6A;
+  --primary-dark: #43A047;
+  --secondary: #7C74FF;
+  --secondary-dark: #5A52D5;
   --bg: #FAFAFA;
   --surface: #FFFFFF;
-  --warm: #FFF8F0;
+  --warm: #F0FFF0;
   --text: #333333;
   --text-secondary: #666666;
   --text-muted: #999999;
@@ -36,414 +36,136 @@ body {
 
 /* ── Nav ── */
 .site-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0,0,0,0.06);
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
 }
-
-.nav-brand {
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
+.nav-brand { font-size: 1.3rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+.nav-links { display: flex; gap: 24px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
 .nav-links a:hover { color: var(--primary); }
 
 /* ── Sections ── */
-section {
-  padding: 80px 24px;
-}
-
-.section-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
+section { padding: 80px 24px; }
+.section-inner { max-width: var(--max-width); margin: 0 auto; }
 
 /* ── Hero ── */
 .hero {
   background: linear-gradient(180deg, var(--warm) 0%, var(--bg) 100%);
-  text-align: center;
-  padding-top: 140px;
-  padding-bottom: 100px;
+  text-align: center; padding-top: 140px; padding-bottom: 100px;
 }
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  color: var(--text);
-}
-
-.hero .subtitle {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  max-width: 580px;
-  margin: 0 auto 40px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+.hero h1 { font-size: 2.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 16px; color: var(--text); }
+.hero .subtitle { font-size: 1.15rem; font-weight: 600; color: var(--text-secondary); max-width: 620px; margin: 0 auto 40px; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 16px 32px;
-  border-radius: var(--radius-sm);
-  font-family: inherit;
-  font-size: 1.05rem;
-  font-weight: 800;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.15s, box-shadow 0.15s;
+  display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px;
+  border-radius: var(--radius-sm); font-family: inherit; font-size: 1.05rem; font-weight: 800;
+  text-decoration: none; border: none; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
 }
-
 .btn:active { transform: scale(0.97); }
-
-.btn-primary {
-  background: var(--primary);
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(124,116,255,0.3);
-}
-
-.btn-primary:hover { box-shadow: 0 6px 24px rgba(124,116,255,0.4); }
-
-.btn-secondary {
-  background: var(--secondary);
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(102,187,106,0.3);
-}
-
-.btn-secondary:hover { box-shadow: 0 6px 24px rgba(102,187,106,0.4); }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 4px 16px rgba(102,187,106,0.3); }
+.btn-primary:hover { box-shadow: 0 6px 24px rgba(102,187,106,0.4); }
+.btn-secondary { background: var(--secondary); color: #fff; box-shadow: 0 4px 16px rgba(124,116,255,0.3); }
+.btn-secondary:hover { box-shadow: 0 6px 24px rgba(124,116,255,0.4); }
 
 /* ── App Sections ── */
 .app-section {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 48px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
+  background: var(--surface); border-radius: var(--radius); padding: 48px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04); display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
 }
-
 .app-section.reversed { direction: rtl; }
 .app-section.reversed > * { direction: ltr; }
 
-.app-section-tag {
-  display: inline-block;
-  padding: 4px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
+.app-section-tag { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 12px; }
+.tag-gs { background: rgba(102,187,106,0.1); color: var(--primary-dark); }
+.tag-yappie { background: rgba(124,116,255,0.1); color: var(--secondary); }
 
-.tag-yappie { background: rgba(124,116,255,0.1); color: var(--primary); }
-.tag-gs { background: rgba(102,187,106,0.1); color: var(--secondary-dark); }
+.app-section h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 8px; }
+.app-section .app-tagline { font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 24px; }
 
-.app-section h2 {
-  font-size: 1.8rem;
-  font-weight: 900;
-  margin-bottom: 8px;
-}
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.feature-list li { font-size: 1rem; font-weight: 600; color: var(--text); padding-left: 28px; position: relative; }
+.feature-list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 12px; height: 12px; border-radius: 50%; }
+.feature-list.green li::before { background: var(--primary); }
+.feature-list.purple li::before { background: var(--secondary); }
 
-.app-section .app-tagline {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 24px;
-}
+.app-price { margin-top: 24px; font-size: 1rem; font-weight: 800; color: var(--text-secondary); }
+.app-price span { font-size: 1.3rem; color: var(--text); }
 
-.feature-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.feature-list li {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text);
-  padding-left: 28px;
-  position: relative;
-}
-
-.feature-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.feature-list.purple li::before { background: var(--primary); }
-.feature-list.green li::before { background: var(--secondary); }
-
-.app-price {
-  margin-top: 24px;
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--text-secondary);
-}
-
-.app-price span {
-  font-size: 1.3rem;
-  color: var(--text);
-}
-
-.app-mockup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--warm);
-  border-radius: var(--radius);
-  overflow: hidden;
-  min-height: 360px;
-}
-
-.app-mockup img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-}
+.app-mockup { display: flex; align-items: center; justify-content: center; background: var(--warm); border-radius: var(--radius); overflow: hidden; min-height: 360px; }
+.app-mockup img { width: 100%; max-width: 300px; height: auto; border-radius: var(--radius); box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 
 /* ── Feature Highlight ── */
-.feature-highlight {
-  text-align: center;
-}
+.feature-highlight { text-align: center; }
+.feature-highlight h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 8px; }
+.feature-highlight .highlight-tagline { font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); max-width: 600px; margin: 0 auto 40px; }
+.highlight-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.highlight-card { background: var(--surface); border-radius: var(--radius); padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); text-align: left; }
+.highlight-card-icon { font-size: 2rem; margin-bottom: 12px; }
+.highlight-card h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+.highlight-card p { font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); line-height: 1.5; }
+@media (max-width: 768px) { .highlight-cards { grid-template-columns: 1fr; } }
 
-.feature-highlight h2 {
-  font-size: 1.8rem;
-  font-weight: 900;
-  margin-bottom: 8px;
+/* ── Therapist Quote ── */
+.therapist-quote {
+  text-align: center; max-width: 640px; margin: 0 auto;
+  font-size: 1.3rem; font-weight: 700; font-style: italic; color: var(--text);
+  line-height: 1.6; padding: 0 20px;
 }
-
-.feature-highlight .highlight-tagline {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-
-.highlight-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.highlight-card {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-  text-align: left;
-}
-
-.highlight-card-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-.highlight-card h3 {
-  font-size: 1.05rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.highlight-card p {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-  .highlight-cards { grid-template-columns: 1fr; }
-}
+.therapist-quote-attr { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); font-style: normal; margin-top: 12px; }
 
 /* ── Trust ── */
-.trust-section {
-  text-align: center;
-}
-
-.trust-section h2 {
-  font-size: 1.8rem;
-  font-weight: 900;
-  margin-bottom: 40px;
-}
-
-.trust-pillars {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.trust-pillar {
-  padding: 24px;
-}
-
-.trust-pillar-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-.trust-pillar h3 {
-  font-size: 1.1rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.trust-pillar p {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
+.trust-section { text-align: center; }
+.trust-section h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 40px; }
+.trust-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.trust-pillar { padding: 24px; }
+.trust-pillar-icon { font-size: 2rem; margin-bottom: 12px; }
+.trust-pillar h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
+.trust-pillar p { font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); }
 
 /* ── About ── */
-.about-section {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 48px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-  text-align: center;
-}
-
-.about-section h2 {
-  font-size: 1.8rem;
-  font-weight: 900;
-  margin-bottom: 24px;
-}
-
-.about-content {
-  max-width: 640px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
+.about-section { background: var(--surface); border-radius: var(--radius); padding: 48px; box-shadow: 0 2px 16px rgba(0,0,0,0.04); text-align: center; }
+.about-section h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 24px; }
+.about-content { max-width: 640px; margin: 0 auto; font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); line-height: 1.8; }
 
 /* ── Footer ── */
-.site-footer {
-  background: var(--text);
-  color: rgba(255,255,255,0.7);
-  padding: 48px 24px;
-  text-align: center;
-}
-
-.footer-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.footer-links {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  list-style: none;
-  margin-bottom: 24px;
-}
-
-.footer-links a {
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
+.site-footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 48px 24px; text-align: center; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-links { display: flex; gap: 24px; justify-content: center; list-style: none; margin-bottom: 24px; }
+.footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
 .footer-links a:hover { color: #fff; }
-
-.footer-social {
-  margin-bottom: 24px;
-}
-
-.footer-social a {
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
+.footer-social { margin-bottom: 24px; }
+.footer-social a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
 .footer-social a:hover { color: #fff; }
+.footer-donate { margin-bottom: 24px; }
+.footer-tagline { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.4); }
 
-.footer-donate {
-  margin-bottom: 24px;
-}
-
-.footer-tagline {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.4);
-}
+/* ── Beta Section ── */
+.beta-section { background: var(--surface); border-radius: var(--radius); padding: 48px; box-shadow: 0 2px 16px rgba(0,0,0,0.04); text-align: center; }
+.beta-section h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 8px; }
+.beta-section .beta-tagline { font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px; }
+.beta-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 36px; text-align: left; }
+.beta-step { background: var(--warm); border-radius: var(--radius); padding: 28px 24px; }
+.beta-step-number { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 900; font-size: 1rem; margin-bottom: 12px; }
+.beta-step h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+.beta-step p { font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); line-height: 1.5; }
+.beta-note { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); margin-top: 20px; max-width: 520px; margin-left: auto; margin-right: auto; }
+@media (max-width: 768px) { .beta-steps { grid-template-columns: 1fr; } .beta-section { padding: 32px 24px; } }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .hero h1 { font-size: 1.8rem; }
   .hero .subtitle { font-size: 1rem; }
-
-  .app-section {
-    grid-template-columns: 1fr;
-    padding: 32px 24px;
-  }
-
+  .app-section { grid-template-columns: 1fr; padding: 32px 24px; }
   .app-section.reversed { direction: ltr; }
-
   .app-mockup { min-height: 240px; }
-
-  .trust-pillars {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
+  .trust-pillars { grid-template-columns: 1fr; gap: 16px; }
   .about-section { padding: 32px 24px; }
-
   .nav-links { gap: 16px; }
   .nav-links a { font-size: 0.8rem; }
 }
-
 @media (max-width: 480px) {
   .hero-buttons { flex-direction: column; align-items: center; }
   .btn { width: 100%; max-width: 280px; justify-content: center; }
@@ -451,86 +173,6 @@ section {
   .app-section { padding: 24px 16px; }
 }
 
-/* ── Beta Section ── */
-.beta-section {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 48px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-  text-align: center;
-}
-
-.beta-section h2 {
-  font-size: 1.8rem;
-  font-weight: 900;
-  margin-bottom: 8px;
-}
-
-.beta-section .beta-tagline {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto 32px;
-}
-
-.beta-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 36px;
-  text-align: left;
-}
-
-.beta-step {
-  background: var(--warm);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-}
-
-.beta-step-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: #fff;
-  font-weight: 900;
-  font-size: 1rem;
-  margin-bottom: 12px;
-}
-
-.beta-step h3 {
-  font-size: 1.05rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.beta-step p {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-.beta-note {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  margin-top: 20px;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  .beta-steps { grid-template-columns: 1fr; }
-  .beta-section { padding: 32px 24px; }
-}
-
-/* ── Smooth scroll ── */
 html { scroll-behavior: smooth; }
 </style>
 </head>
@@ -540,8 +182,8 @@ html { scroll-behavior: smooth; }
 <nav class="site-nav">
   <a href="#" class="nav-brand">Yappie</a>
   <ul class="nav-links">
-    <li><a href="#yappie">Yappie</a></li>
     <li><a href="#guiding-steps">Guiding Steps</a></li>
+    <li><a href="#yappie">Yappie</a></li>
     <li><a href="#beta">Beta</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#support">Support</a></li>
@@ -551,11 +193,11 @@ html { scroll-behavior: smooth; }
 <!-- Hero -->
 <section class="hero" id="home">
   <div class="section-inner">
-    <h1>Every child has something to say.</h1>
-    <p class="subtitle">Two apps built by a parent, for parents. Helping your child communicate, build routines, and feel prepared -- one tap at a time.</p>
+    <h1>Structure, stories, and a voice for every child.</h1>
+    <p class="subtitle">Two apps built by a parent, for parents. Visual schedules, social stories, step-by-step task strips, and AAC communication -- tools that therapists are calling a game changer.</p>
     <div class="hero-buttons">
-      <a href="#yappie" class="btn btn-primary">Get Yappie</a>
-      <a href="#guiding-steps" class="btn btn-secondary">Get Guiding Steps</a>
+      <a href="#guiding-steps" class="btn btn-primary">Explore Guiding Steps</a>
+      <a href="#yappie" class="btn btn-secondary">Explore Yappie</a>
     </div>
   </div>
 </section>
@@ -564,9 +206,9 @@ html { scroll-behavior: smooth; }
 <section id="beta">
   <div class="section-inner">
     <div class="beta-section">
-      <span class="app-section-tag tag-yappie">Early Access</span>
+      <span class="app-section-tag tag-gs">Early Access</span>
       <h2>Beta Testing Phase 1</h2>
-      <p class="beta-tagline">Both apps are in beta and we're looking for families to try them before launch. Free access, real feedback, better apps.</p>
+      <p class="beta-tagline">Both apps are in beta and we're looking for families and therapists to try them before launch. Free access, real feedback, better apps.</p>
       <div class="beta-steps">
         <div class="beta-step">
           <div class="beta-step-number">1</div>
@@ -585,10 +227,97 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
       <div class="hero-buttons">
-        <a href="https://testflight.apple.com/join/hkBAbSX1" class="btn btn-primary" target="_blank" rel="noopener">Join the Yappie Beta</a>
-        <a href="https://testflight.apple.com/join/1SDjVVDU" class="btn btn-secondary" target="_blank" rel="noopener">Join the Guiding Steps Beta</a>
+        <a href="https://testflight.apple.com/join/1SDjVVDU" class="btn btn-primary" target="_blank" rel="noopener">Join the Guiding Steps Beta</a>
+        <a href="https://testflight.apple.com/join/hkBAbSX1" class="btn btn-secondary" target="_blank" rel="noopener">Join the Yappie Beta</a>
       </div>
       <p class="beta-note">Requires an iPhone or iPad running iOS 16 or later. The beta is free -- no purchase needed. Your feedback helps us build a better app for every family.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Guiding Steps -->
+<section id="guiding-steps">
+  <div class="section-inner">
+    <div class="app-section">
+      <div>
+        <span class="app-section-tag tag-gs">Routines, Stories &amp; Task Strips</span>
+        <h2>Guiding Steps</h2>
+        <p class="app-tagline">The therapy tool that doesn't exist yet -- until now.</p>
+        <p style="color:var(--text-secondary);font-weight:600;margin-bottom:20px;">Visual schedules, reward charts, social stories, and step-by-step task strips designed for children who thrive with routine and preparation. Built with developmental therapists. Nothing like it on the market.</p>
+        <ul class="feature-list green">
+          <li>Visual task strips for potty training, handwashing, brushing teeth, and more</li>
+          <li>Visual schedules with step-by-step progress tracking</li>
+          <li>Social stories for doctor visits, haircuts, school, and new experiences</li>
+          <li>Print and share stories as PDFs for offline use</li>
+          <li>Reward charts that celebrate effort, not perfection</li>
+          <li>Pre-loaded templates -- start using it in seconds</li>
+          <li>Sensory-friendly design throughout</li>
+        </ul>
+        <p class="app-price"><span>$4.99</span> -- one time, no subscription.</p>
+      </div>
+      <div class="app-mockup"><img src="images/gs-schedule.jpg" alt="Guiding Steps morning routine schedule with step-by-step progress"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Task Strips Highlight -->
+<section class="feature-highlight" style="background:var(--warm);">
+  <div class="section-inner">
+    <span class="app-section-tag tag-gs">New in Guiding Steps</span>
+    <h2>Visual Task Strips</h2>
+    <p class="highlight-tagline">Break any routine into simple, visual steps your child can follow independently. Therapists have been making these with laminated cards for decades -- now it's in an app.</p>
+    <div class="highlight-cards">
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1F6BD;</div>
+        <h3>Potty Training</h3>
+        <p>Pull pants down, sit on potty, go, wipe, pull pants up, flush. Each step has its own image. Tap "Done!" to move forward.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1F9FC;</div>
+        <h3>Handwashing</h3>
+        <p>Turn on water, wet hands, get soap, rub, rinse, dry. The same sequence every time -- building independence through consistency.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1FAA5;</div>
+        <h3>Any Routine You Need</h3>
+        <p>Brushing teeth, getting dressed, bedtime -- use our templates or create your own with custom photos. 2-8 steps, your child's pace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Stories Highlight -->
+<section class="feature-highlight">
+  <div class="section-inner">
+    <span class="app-section-tag tag-gs">Inside Guiding Steps</span>
+    <h2>Social Stories That Prepare, Not Just Describe</h2>
+    <p class="highlight-tagline">Help your child feel ready for new experiences with personalized, illustrated stories they can read together with you -- or on their own. Print them out for the car ride there.</p>
+    <div class="highlight-cards">
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1FA7A;</div>
+        <h3>Doctor Visits</h3>
+        <p>"The doctor will look at your body to make sure you are healthy." Step-by-step preparation that reduces anxiety before it starts.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x2702;</div>
+        <h3>Haircuts</h3>
+        <p>"The clippers might buzz and feel tingly. That is just what they do." Sensory-aware language that validates your child's experience.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-card-icon">&#x1F3EB;</div>
+        <h3>First Day of School</h3>
+        <p>"It is okay to feel nervous about something new." Stories that name the feeling and give your child a plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Therapist Quote -->
+<section style="background:var(--warm);">
+  <div class="section-inner">
+    <div class="therapist-quote">
+      "I've been making visual task strips with laminated cards and velcro for 20 years. An app that does this well -- with pre-loaded templates and custom photos -- fills a gap nothing else on the market touches."
+      <div class="therapist-quote-attr">-- Developmental Therapist, Beta Tester</div>
     </div>
   </div>
 </section>
@@ -596,7 +325,7 @@ html { scroll-behavior: smooth; }
 <!-- Yappie -->
 <section id="yappie">
   <div class="section-inner">
-    <div class="app-section">
+    <div class="app-section reversed">
       <div>
         <span class="app-section-tag tag-yappie">Communication</span>
         <h2>Yappie</h2>
@@ -617,7 +346,7 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- Yappie Activities Highlight -->
-<section class="feature-highlight" style="background:var(--warm);">
+<section class="feature-highlight" style="background:#F5F0FF;">
   <div class="section-inner">
     <span class="app-section-tag tag-yappie">Only in Yappie</span>
     <h2>Activity Mode</h2>
@@ -637,54 +366,6 @@ html { scroll-behavior: smooth; }
         <div class="highlight-card-icon">&#x1F6C1;</div>
         <h3>Bath Time</h3>
         <p>"Warm", "cold", "splash", "all done" -- context-specific vocabulary that makes communication natural.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Guiding Steps -->
-<section id="guiding-steps">
-  <div class="section-inner">
-    <div class="app-section reversed">
-      <div>
-        <span class="app-section-tag tag-gs">Routines &amp; Stories</span>
-        <h2>Guiding Steps</h2>
-        <p class="app-tagline">Structure that feels like support.</p>
-        <p style="color:var(--text-secondary);font-weight:600;margin-bottom:20px;">Visual schedules, reward charts, and social stories designed for children who thrive with routine and preparation.</p>
-        <ul class="feature-list green">
-          <li>Visual schedules with step-by-step progress</li>
-          <li>Reward charts that celebrate effort, not perfection</li>
-          <li>Social stories for doctor visits, haircuts, school, and more</li>
-          <li>Sensory-friendly design throughout</li>
-        </ul>
-        <p class="app-price"><span>$4.99</span> -- one time, no subscription.</p>
-      </div>
-      <div class="app-mockup"><img src="images/gs-schedule.jpg" alt="Guiding Steps morning routine schedule with step-by-step progress"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Social Stories Highlight -->
-<section class="feature-highlight">
-  <div class="section-inner">
-    <span class="app-section-tag tag-gs">Inside Guiding Steps</span>
-    <h2>Social Stories That Prepare, Not Just Describe</h2>
-    <p class="highlight-tagline">Help your child feel ready for new experiences with personalized, illustrated stories they can read together with you -- or on their own.</p>
-    <div class="highlight-cards">
-      <div class="highlight-card">
-        <div class="highlight-card-icon">&#x1FA7A;</div>
-        <h3>Doctor Visits</h3>
-        <p>"The doctor will look at your body to make sure you are healthy." Step-by-step preparation that reduces anxiety before it starts.</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-card-icon">&#x2702;</div>
-        <h3>Haircuts</h3>
-        <p>"The clippers might buzz and feel tingly. That is just what they do." Sensory-aware language that validates your child's experience.</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-card-icon">&#x1F3EB;</div>
-        <h3>First Day of School</h3>
-        <p>"It is okay to feel nervous about something new." Stories that name the feeling and give your child a plan.</p>
       </div>
     </div>
   </div>
@@ -715,7 +396,7 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- About -->
-<section id="about">
+<section id="about" style="background:var(--warm);">
   <div class="section-inner">
     <div class="about-section">
       <h2>About</h2>
