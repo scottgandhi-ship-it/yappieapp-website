@@ -451,6 +451,85 @@ section {
   .app-section { padding: 24px 16px; }
 }
 
+/* ── Beta Section ── */
+.beta-section {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 48px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  text-align: center;
+}
+
+.beta-section h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.beta-section .beta-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.beta-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.beta-step {
+  background: var(--warm);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+.beta-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.beta-step h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.beta-step p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.beta-note {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 20px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .beta-steps { grid-template-columns: 1fr; }
+  .beta-section { padding: 32px 24px; }
+}
+
 /* ── Smooth scroll ── */
 html { scroll-behavior: smooth; }
 </style>
@@ -463,6 +542,7 @@ html { scroll-behavior: smooth; }
   <ul class="nav-links">
     <li><a href="#yappie">Yappie</a></li>
     <li><a href="#guiding-steps">Guiding Steps</a></li>
+    <li><a href="#beta">Beta</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#support">Support</a></li>
   </ul>
@@ -476,6 +556,39 @@ html { scroll-behavior: smooth; }
     <div class="hero-buttons">
       <a href="#yappie" class="btn btn-primary">Get Yappie</a>
       <a href="#guiding-steps" class="btn btn-secondary">Get Guiding Steps</a>
+    </div>
+  </div>
+</section>
+
+<!-- Beta Testing -->
+<section id="beta">
+  <div class="section-inner">
+    <div class="beta-section">
+      <span class="app-section-tag tag-yappie">Early Access</span>
+      <h2>Beta Testing Phase 1</h2>
+      <p class="beta-tagline">Both apps are in beta and we're looking for families to try them before launch. Free access, real feedback, better apps.</p>
+      <div class="beta-steps">
+        <div class="beta-step">
+          <div class="beta-step-number">1</div>
+          <h3>Install TestFlight</h3>
+          <p>Download Apple's <strong>TestFlight</strong> app from the App Store. It's free and made by Apple -- it's how developers share pre-release apps for testing.</p>
+        </div>
+        <div class="beta-step">
+          <div class="beta-step-number">2</div>
+          <h3>Open the Invite Link</h3>
+          <p>Tap the buttons below on your iPhone or iPad. Each will open in TestFlight and ask you to accept the beta invitation.</p>
+        </div>
+        <div class="beta-step">
+          <div class="beta-step-number">3</div>
+          <h3>Install and Explore</h3>
+          <p>Tap <strong>Install</strong> in TestFlight and the apps will appear on your home screen. Use them like any app -- and let us know what you think.</p>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="https://testflight.apple.com/join/hkBAbSX1" class="btn btn-primary" target="_blank" rel="noopener">Join the Yappie Beta</a>
+        <a href="https://testflight.apple.com/join/1SDjVVDU" class="btn btn-secondary" target="_blank" rel="noopener">Join the Guiding Steps Beta</a>
+      </div>
+      <p class="beta-note">Requires an iPhone or iPad running iOS 16 or later. The beta is free -- no purchase needed. Your feedback helps us build a better app for every family.</p>
     </div>
   </div>
 </section>
@@ -602,7 +715,7 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- About -->
-<section id="about" style="background:var(--warm);">
+<section id="about">
   <div class="section-inner">
     <div class="about-section">
       <h2>About</h2>
