@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service -- Yappie</title>
+<meta name="description" content="Terms of Service for Yappie and Guiding Steps apps by Scott Lussier.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #66BB6A;
+  --primary-dark: #43A047;
+  --secondary: #7C74FF;
+  --secondary-dark: #5A52D5;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --warm: #F0FFF0;
+  --text: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --radius: 16px;
+  --radius-sm: 12px;
+  --max-width: 960px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Nav ── */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { font-size: 1.3rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+.nav-links { display: flex; gap: 24px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
+.nav-links a:hover { color: var(--primary); }
+
+/* ── Legal Content ── */
+.legal-page {
+  padding: 120px 24px 80px;
+}
+.legal-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 48px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+.legal-inner h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.legal-effective {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+.legal-inner h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.legal-inner p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.legal-inner ul {
+  list-style: disc;
+  margin-left: 28px;
+  margin-bottom: 16px;
+}
+.legal-inner li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+.legal-inner a {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+.legal-inner a:hover {
+  color: var(--primary);
+}
+
+/* ── Footer ── */
+.site-footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 48px 24px; text-align: center; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-links { display: flex; gap: 24px; justify-content: center; list-style: none; margin-bottom: 24px; }
+.footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
+.footer-links a:hover { color: #fff; }
+.footer-social { margin-bottom: 24px; }
+.footer-social a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
+.footer-social a:hover { color: #fff; }
+.footer-donate { margin-bottom: 24px; }
+.footer-tagline { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.4); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .legal-inner { padding: 32px 24px; }
+  .legal-inner h1 { font-size: 1.6rem; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.8rem; }
+}
+@media (max-width: 480px) {
+  .legal-page { padding: 100px 16px 60px; }
+  .legal-inner { padding: 24px 16px; }
+}
+
+html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="site-nav">
+  <a href="/" class="nav-brand">Yappie</a>
+  <ul class="nav-links">
+    <li><a href="/#guiding-steps">Guiding Steps</a></li>
+    <li><a href="/#yappie">Yappie</a></li>
+    <li><a href="/#beta">Beta</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#support">Support</a></li>
+  </ul>
+</nav>
+
+<!-- Terms of Service -->
+<div class="legal-page">
+  <div class="legal-inner">
+    <h1>Terms of Service</h1>
+    <p class="legal-effective">Effective Date: May 1, 2026</p>
+
+    <p>Welcome to Yappie. These Terms of Service ("Terms") govern your use of the Yappie AAC Board app, the Guiding Steps app, and the yappieapp.com website (together, the "Services"). The Services are provided by Scott Lussier ("we," "us," or "our"), an independent developer based in Utah, United States.</p>
+
+    <p>By downloading, installing, or using either app, or by using the yappieapp.com website, you agree to these Terms. If you do not agree, please do not use the Services.</p>
+
+    <h2>1. About the Apps</h2>
+    <p>Yappie is an augmentative and alternative communication (AAC) board app designed for parents and caregivers to use with young children. Guiding Steps is a visual schedule, social story, and task strip app for families building daily routines. Both apps are intended for use by adults (parents, caregivers, therapists) alongside children ages 3-6.</p>
+
+    <h2>2. Medical Disclaimer</h2>
+    <p>This is important, so we want to be clear:</p>
+    <p>Yappie and Guiding Steps are communication and organizational tools. They are <strong>not</strong> medical devices, therapeutic tools, or diagnostic instruments. They do <strong>not</strong> provide medical advice, speech therapy, behavioral therapy, or any form of clinical treatment. They are <strong>not</strong> substitutes for professional evaluation, diagnosis, or treatment by a qualified speech-language pathologist, developmental therapist, occupational therapist, physician, or other healthcare provider.</p>
+    <p>If your child has communication, developmental, or behavioral needs, please consult a qualified professional. Do not delay seeking professional help because of anything you experience in these apps. Any decisions you make about your child's care based on your use of these apps are your own responsibility.</p>
+
+    <h2>3. Eligibility</h2>
+    <p>The apps are designed for use by adults (age 18 or older) who are parents, caregivers, or professionals working with young children. By using the Services, you confirm that you are at least 18 years old. Children should only use the apps under direct adult supervision.</p>
+
+    <h2>4. Purchases and Payments</h2>
+    <p>Both apps are available as one-time purchases through the Apple App Store. There are no subscriptions, no in-app purchases, and no recurring charges. Once you buy an app, it is yours to use.</p>
+    <p>All purchases are processed by Apple. Pricing, payment, refunds, and billing disputes are handled by Apple in accordance with their <a href="https://www.apple.com/legal/internet-services/itunes/" target="_blank" rel="noopener">App Store Terms and Conditions</a>. If you need a refund, please contact Apple directly through the App Store or at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+
+    <h2>5. Donations</h2>
+    <p>The yappieapp.com website offers a voluntary donation option via PayPal. Donations are entirely optional and are given freely in support of ongoing development. Donations do not entitle donors to any additional features, services, priority support, or future products. Donations are non-refundable.</p>
+
+    <h2>6. Your Data and Privacy</h2>
+    <p>Both apps store all data locally on your device. We do not collect, transmit, or store any personal information, usage data, or user-created content. There are no user accounts, no cloud sync, and no analytics tracking. When you delete an app, all data associated with it is deleted from your device.</p>
+    <p>Photos you add to the apps remain on your device and are never uploaded or shared by us. Text-to-speech is handled by your device's built-in speech engine and does not send data to any server.</p>
+    <p>For complete details, please read our <a href="/privacy">Privacy Policy</a>.</p>
+
+    <h2>7. User-Created Content</h2>
+    <p>Both apps allow you to create custom content -- such as custom vocabulary entries in Yappie, or custom schedules, social stories, and task strips in Guiding Steps. You may also add your own photos.</p>
+    <p>You are solely responsible for any content you create or add to the apps. You agree that you have the right to use any photos or images you add and that your custom content does not violate any applicable law.</p>
+    <p>Because all content stays on your device, we have no access to it and no ability to review, moderate, or remove it.</p>
+
+    <h2>8. Acceptable Use</h2>
+    <p>You agree to use the Services only for their intended purpose: as communication and organizational tools for families and professionals supporting young children. You agree not to:</p>
+    <ul>
+      <li>Reverse engineer, decompile, or disassemble the apps</li>
+      <li>Attempt to extract the source code of the apps</li>
+      <li>Redistribute, resell, or sublicense the apps or any part of them</li>
+      <li>Use the apps or website for any unlawful purpose</li>
+      <li>Remove or alter any copyright, trademark, or attribution notices within the apps</li>
+    </ul>
+
+    <h2>9. Intellectual Property</h2>
+    <p>The Yappie and Guiding Steps apps, including their design, code, pre-loaded content, templates, and original artwork, are the property of Scott Lussier and are protected by United States copyright law. All rights are reserved.</p>
+    <p>The Yappie name, Guiding Steps name, and associated logos are trademarks of Scott Lussier.</p>
+
+    <h2>10. ARASAAC Symbol Attribution</h2>
+    <p>The Yappie app uses pictographic symbols from <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a> (Aragonese Centre of Augmentative and Alternative Communication), created by the Government of Aragon, Spain. These symbols are licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)</a>.</p>
+    <p>The ARASAAC symbols remain the property of the Government of Aragon. Their inclusion in Yappie does not transfer ownership of these symbols to you, and their use is subject to the terms of the CC BY-NC-SA 4.0 license.</p>
+
+    <h2>11. Third-Party Services</h2>
+    <p>The apps use your device's built-in text-to-speech engine, which is provided by Apple. We are not responsible for the availability, accuracy, or quality of the text-to-speech output.</p>
+    <p>The website includes a PayPal donation button. Your use of PayPal is governed by PayPal's own terms of service and privacy policy.</p>
+    <p>Purchases are processed through the Apple App Store. Your use of the App Store is governed by Apple's terms.</p>
+
+    <h2>12. Disclaimer of Warranties</h2>
+    <p>The Services are provided "as is" and "as available" without warranties of any kind, whether express or implied. We do not warrant that the apps will be error-free, uninterrupted, or free of defects. We do not warrant that the apps will meet your specific needs or expectations.</p>
+    <p>To the fullest extent permitted by applicable law, we disclaim all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+    <h2>13. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, Scott Lussier shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of (or inability to use) the Services, including but not limited to damages for loss of data, loss of profits, or personal injury.</p>
+    <p>Our total liability for any claim related to the Services shall not exceed the amount you paid for the app giving rise to the claim.</p>
+    <p>Some jurisdictions do not allow the exclusion or limitation of certain damages. In those jurisdictions, our liability is limited to the greatest extent permitted by law.</p>
+
+    <h2>14. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless Scott Lussier from any claims, damages, losses, or expenses (including reasonable legal fees) arising from your use of the Services, your violation of these Terms, or your violation of any rights of a third party.</p>
+
+    <h2>15. Updates and Changes to the Apps</h2>
+    <p>We may release updates to the apps from time to time to fix bugs, improve performance, or add new features. Updates are distributed through the Apple App Store. We are not obligated to provide updates, new features, or ongoing support, though we intend to continue improving both apps.</p>
+
+    <h2>16. Termination</h2>
+    <p>You may stop using the Services at any time by deleting the apps from your device and ceasing to visit the website.</p>
+    <p>We reserve the right to discontinue the apps or the website at any time, for any reason, without notice. If we discontinue an app, you will retain access to any version already installed on your device, though future updates will no longer be available.</p>
+
+    <h2>17. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. When we do, we will update the "Effective Date" at the top of this page and post the revised Terms on yappieapp.com. Your continued use of the Services after changes are posted constitutes your acceptance of the updated Terms.</p>
+    <p>For significant changes, we will make reasonable efforts to notify users through the website or app update notes.</p>
+
+    <h2>18. Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the State of Utah, United States, without regard to its conflict of law principles. Any disputes arising from these Terms or your use of the Services shall be resolved in the state or federal courts located in Utah.</p>
+
+    <h2>19. Severability</h2>
+    <p>If any provision of these Terms is found to be unenforceable or invalid by a court of competent jurisdiction, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full effect.</p>
+
+    <h2>20. Entire Agreement</h2>
+    <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and Scott Lussier regarding the Services and supersede any prior agreements or understandings.</p>
+
+    <h2>21. Contact</h2>
+    <p>If you have any questions about these Terms, please reach out:</p>
+    <p><strong>Email:</strong> <a href="mailto:support@yappieapp.com">support@yappieapp.com</a></p>
+    <p><strong>Website:</strong> <a href="https://yappieapp.com">yappieapp.com</a></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <ul class="footer-links">
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/terms">Terms of Service</a></li>
+      <li><a href="/#support">Support</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://instagram.com/yappieapp" target="_blank" rel="noopener">Instagram: @yappieapp</a>
+    </div>
+    <div class="footer-donate">
+      <!-- PayPal donate button goes here -->
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);">[PayPal Donate Button]</p>
+    </div>
+    <p class="footer-tagline">Made with love for families who need it most.</p>
+  </div>
+</footer>
+
+</body>
+</html>

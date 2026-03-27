@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy -- Yappie</title>
+<meta name="description" content="Privacy Policy for Yappie and Guiding Steps apps. COPPA-compliant, no tracking, no ads, no accounts. Your child's data stays on your device.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #66BB6A;
+  --primary-dark: #43A047;
+  --secondary: #7C74FF;
+  --secondary-dark: #5A52D5;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --warm: #F0FFF0;
+  --text: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --radius: 16px;
+  --radius-sm: 12px;
+  --max-width: 960px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Nav ── */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { font-size: 1.3rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+.nav-links { display: flex; gap: 24px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
+.nav-links a:hover { color: var(--primary); }
+
+/* ── Policy Content ── */
+.policy-hero {
+  background: linear-gradient(180deg, var(--warm) 0%, var(--bg) 100%);
+  text-align: center; padding: 140px 24px 60px;
+}
+.policy-hero h1 { font-size: 2.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 12px; color: var(--text); }
+.policy-hero .effective-date { font-size: 1rem; font-weight: 600; color: var(--text-muted); }
+
+.policy-content {
+  max-width: 720px; margin: 0 auto; padding: 40px 24px 80px;
+}
+.policy-content h2 {
+  font-size: 1.4rem; font-weight: 900; margin: 40px 0 12px; color: var(--text);
+  padding-bottom: 8px; border-bottom: 2px solid var(--primary);
+}
+.policy-content h2:first-of-type { margin-top: 0; }
+.policy-content p {
+  font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8;
+}
+.policy-content ul {
+  list-style: none; margin: 0 0 16px 0; padding: 0;
+}
+.policy-content ul li {
+  font-size: 1rem; font-weight: 600; color: var(--text-secondary); padding: 6px 0 6px 28px; position: relative; line-height: 1.6;
+}
+.policy-content ul li::before {
+  content: ''; position: absolute; left: 0; top: 14px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary);
+}
+.policy-content strong { color: var(--text); font-weight: 800; }
+.policy-content a { color: var(--primary-dark); text-decoration: underline; font-weight: 700; }
+.policy-content a:hover { color: var(--primary); }
+
+.policy-summary {
+  background: var(--surface); border-radius: var(--radius); padding: 28px 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04); margin-bottom: 40px;
+}
+.policy-summary h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 12px; color: var(--primary-dark); }
+.policy-summary ul li::before { background: var(--primary); }
+
+/* ── Footer ── */
+.site-footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 48px 24px; text-align: center; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-links { display: flex; gap: 24px; justify-content: center; list-style: none; margin-bottom: 24px; }
+.footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
+.footer-links a:hover { color: #fff; }
+.footer-social { margin-bottom: 24px; }
+.footer-social a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: color 0.2s; }
+.footer-social a:hover { color: #fff; }
+.footer-donate { margin-bottom: 24px; }
+.footer-tagline { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.4); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .policy-hero h1 { font-size: 1.6rem; }
+  .policy-content h2 { font-size: 1.2rem; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.8rem; }
+}
+@media (max-width: 480px) {
+  .policy-content { padding: 24px 16px 60px; }
+  .policy-summary { padding: 20px; }
+}
+
+html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="site-nav">
+  <a href="/" class="nav-brand">Yappie</a>
+  <ul class="nav-links">
+    <li><a href="/#guiding-steps">Guiding Steps</a></li>
+    <li><a href="/#yappie">Yappie</a></li>
+    <li><a href="/#beta">Beta</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#support">Support</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<div class="policy-hero">
+  <h1>Privacy Policy</h1>
+  <p class="effective-date">Effective Date: May 1, 2026</p>
+</div>
+
+<!-- Content -->
+<div class="policy-content">
+
+  <div class="policy-summary">
+    <h3>The Short Version</h3>
+    <ul>
+      <li>We do not collect, store, or share your child's personal information.</li>
+      <li>Everything your child creates in our apps stays on your device -- we never see it.</li>
+      <li>No accounts, no tracking, no ads, no in-app purchases.</li>
+      <li>Both apps are designed for the Apple App Store Kids category and comply with COPPA.</li>
+    </ul>
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>This Privacy Policy applies to <strong>Yappie</strong> (an AAC communication board app) and <strong>Guiding Steps</strong> (a visual schedule, social story, and task strip app), collectively referred to as "the Apps." Both apps are developed and maintained by Scott Lussier, an independent developer based in the United States, operating under the name Yappie ("we," "us," or "our").</p>
+  <p>This policy also covers our website at <a href="https://yappieapp.com">yappieapp.com</a> ("the Website").</p>
+
+  <h2>2. Our Commitment to Children's Privacy</h2>
+  <p>Both Yappie and Guiding Steps are designed for young children (ages 3-6) and are published in the Apple App Store Kids category. We take children's privacy extremely seriously.</p>
+  <p>We comply with the <strong>Children's Online Privacy Protection Act (COPPA)</strong>, the <strong>Apple App Store Guidelines for Kids category apps</strong>, and all applicable privacy regulations. Our apps are built from the ground up with the principle that the best way to protect children's data is to never collect it in the first place.</p>
+
+  <h2>3. Information We Do Not Collect</h2>
+  <p>To be absolutely clear, our apps do <strong>not</strong> collect any of the following:</p>
+  <ul>
+    <li>Names, email addresses, phone numbers, or any personal contact information</li>
+    <li>Photos, audio recordings, or any media created within the apps</li>
+    <li>Location data or device identifiers</li>
+    <li>Usage analytics, behavioral data, or browsing history</li>
+    <li>Any information that could identify your child</li>
+  </ul>
+  <p>Our apps require no account creation, no login, and no registration of any kind. There is nothing to sign up for and no information to enter.</p>
+
+  <h2>4. Data Stored on Your Device</h2>
+  <p>Both apps store data locally on your device to function properly. This data never leaves your device and is never transmitted to us or any third party. Locally stored data includes:</p>
+  <ul>
+    <li><strong>App settings and preferences</strong> -- such as vocabulary levels, schedule configurations, display preferences, and progress tracking</li>
+    <li><strong>Custom content you create</strong> -- including custom words, visual schedules, social stories, task strips, and reward charts</li>
+    <li><strong>Photos you add</strong> -- if you upload custom photos (for example, a photo of your child's toothbrush for a brushing teeth task strip), those images are stored in your device's local storage (IndexedDB). They are never uploaded, transmitted, or accessible to us or anyone else.</li>
+  </ul>
+  <p>This data is stored using your device's built-in storage (localStorage and IndexedDB). If you delete the app, this data is deleted with it. We have no ability to access, view, or recover this data.</p>
+
+  <h2>5. Text-to-Speech</h2>
+  <p>Yappie uses your device's built-in text-to-speech capability (the Web Speech API) to speak words and sentences aloud. This processing happens entirely on your device. No audio or text is sent to any server. We do not record or store any speech output.</p>
+
+  <h2>6. Firebase Crashlytics (Crash Reporting)</h2>
+  <p>Our apps include Firebase Crashlytics, a crash reporting service provided by Google, to help us identify and fix technical problems. Here is how we handle it responsibly:</p>
+  <ul>
+    <li><strong>Disabled by default.</strong> Crash data collection is turned off when the app launches. No crash data is collected while your child is using the app in its normal mode.</li>
+    <li><strong>Only active in parent mode.</strong> Crash reporting is only enabled when a parent or caregiver activates parent mode, which is protected by a press-and-hold parental gate that young children cannot easily activate.</li>
+    <li><strong>What it collects when enabled.</strong> When active in parent mode, Crashlytics may collect technical crash information such as device type, operating system version, and crash stack traces. This data is used solely to diagnose and fix bugs.</li>
+    <li><strong>No personal information.</strong> Crashlytics does not collect names, photos, communication content, schedule data, or any personal information from within the app. It only collects technical diagnostic data about the crash itself.</li>
+    <li><strong>Automatically disabled.</strong> When parent mode is exited, crash data collection is immediately disabled again.</li>
+  </ul>
+  <p>Firebase Crashlytics is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. We have configured Crashlytics in a COPPA-compliant manner and do not permit it to collect data from children.</p>
+
+  <h2>7. Third-Party Services in the Apps</h2>
+  <p>Other than Firebase Crashlytics (described above, and only when explicitly enabled by a parent), our apps do not use any third-party services. Specifically:</p>
+  <ul>
+    <li>No advertising networks or ad tracking</li>
+    <li>No analytics or usage tracking services</li>
+    <li>No social media integrations or sharing features</li>
+    <li>No third-party login providers</li>
+    <li>No in-app purchase frameworks (both apps are paid upfront in the App Store)</li>
+  </ul>
+
+  <h2>8. Internet Connectivity</h2>
+  <p>Both apps are designed to work offline. After the initial download from the App Store, no internet connection is required to use any feature. The apps do not transmit data to any server during normal use.</p>
+
+  <h2>9. The Website (yappieapp.com)</h2>
+  <p>Our website at yappieapp.com is a static marketing and informational site. The website is separate from our apps and is not directed at children.</p>
+  <p><strong>Website analytics:</strong> We may use privacy-friendly analytics (such as Plausible Analytics) on our website to understand general traffic patterns such as page views and referral sources. These services do not use cookies, do not track visitors across sites, and do not collect personal information. This analytics is used on the website only -- never in the apps.</p>
+  <p><strong>Contact:</strong> The website provides an email link (support@yappieapp.com) for support inquiries. If you email us, we will receive your email address and any information you choose to include in your message. We use this information solely to respond to your inquiry and do not add it to any marketing list or share it with third parties.</p>
+  <p><strong>Donations:</strong> The website may include a PayPal donate button. If you choose to make a donation, that transaction is handled entirely by PayPal and is subject to <a href="https://www.paypal.com/us/legalhub/privacy-full" target="_blank" rel="noopener">PayPal's Privacy Policy</a>. We do not collect or store your payment information.</p>
+
+  <h2>10. Parental Controls</h2>
+  <p>Both apps include a parental gate -- a press-and-hold mechanism -- that prevents young children from accidentally accessing parent settings. All configuration, settings changes, and the enabling of crash reporting require passing through this parental gate. Children using the apps in their normal mode cannot access these features.</p>
+
+  <h2>11. Data Sharing</h2>
+  <p>We do not sell, trade, rent, or share any user data with anyone. Period. Because we do not collect personal data from the apps, there is nothing to share.</p>
+
+  <h2>12. Data Retention</h2>
+  <p>Since all app data is stored locally on your device, you have full control over it. Deleting the app removes all associated data. We retain no data on any server because we do not collect any.</p>
+  <p>If you contact us via email, we retain your support correspondence only as long as needed to resolve your inquiry.</p>
+
+  <h2>13. Your Rights</h2>
+  <p>Because we do not collect personal information from our apps, there is no personal data for us to provide, correct, or delete. If you have any questions or concerns about data associated with the apps, you are welcome to contact us and we will assist you.</p>
+  <p>Parents and guardians have the right to:</p>
+  <ul>
+    <li>Review any information we may hold (which, from the apps, is none)</li>
+    <li>Request deletion of any support correspondence</li>
+    <li>Ask questions about our privacy practices at any time</li>
+  </ul>
+
+  <h2>14. Security</h2>
+  <p>Because all app data remains on your device, its security is managed by your device's built-in protections (passcode, Face ID, Touch ID, device encryption). We recommend using a device passcode to protect access to your device and the data stored on it.</p>
+
+  <h2>15. Changes to This Policy</h2>
+  <p>If we make changes to this Privacy Policy, we will update this page with the new effective date. If we ever introduce any data collection beyond what is described here, we will notify users through an app update and update this policy before any new collection begins.</p>
+  <p>We will never begin collecting personal information from children without providing clear notice and obtaining verifiable parental consent as required by COPPA.</p>
+
+  <h2>16. Contact Us</h2>
+  <p>If you have any questions about this Privacy Policy, your child's privacy, or anything else, please contact us:</p>
+  <p><strong>Email:</strong> <a href="mailto:support@yappieapp.com">support@yappieapp.com</a></p>
+  <p><strong>Developer:</strong> Scott Lussier</p>
+  <p><strong>Website:</strong> <a href="https://yappieapp.com">yappieapp.com</a></p>
+
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <ul class="footer-links">
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/terms">Terms of Service</a></li>
+      <li><a href="/#support">Support</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://instagram.com/yappieapp" target="_blank" rel="noopener">Instagram: @yappieapp</a>
+    </div>
+    <div class="footer-donate">
+      <!-- PayPal donate button goes here -->
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);">[PayPal Donate Button]</p>
+    </div>
+    <p class="footer-tagline">Made with love for families who need it most.</p>
+  </div>
+</footer>
+
+</body>
+</html>
